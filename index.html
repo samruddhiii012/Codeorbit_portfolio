@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samruddhi Harel | Portfolio</title>
+  <meta name="description" content="Samruddhi Harel - Backend and AI Developer and E&TC Student building APIs, AI search, and computer vision projects with Python, FastAPI, Node.js and Supabase." />
+  <meta name="author" content="Samruddhi Harel" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233B82F6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700' font-size='14'%3ESH%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background layer -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- Mouse Trail Container -->
+  <div class="cursor-trail-container"></div>
+
+  <!-- Scroll-progress bar -->
+  <div class="scroll-progress" aria-hidden="true" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-inner container">
+      <a href="#hero" class="nav-logo" aria-label="Samruddhi Harel - back to top">
+        <span class="logo-text"><strong>Samruddhi Harel</strong></span>
+        <span class="status-pill" aria-label="Open to internships">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to internships
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <a href="#about"       class="nav-link" data-section="about">About</a>
+        <a href="#skills"      class="nav-link" data-section="skills">Skills</a>
+        <a href="#experience"  class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects"    class="nav-link" data-section="projects">Projects</a>
+        <a href="#credentials" class="nav-link" data-section="credentials">Credentials</a>
+        <a href="#contact"     class="nav-link" data-section="contact">Contact</a>
+        <a href="assets/resume.pdf" class="nav-link nav-link-resume" target="_blank" rel="noopener" id="nav-resume-mobile">Resume</a>
+        <span class="nav-indicator" aria-hidden="true"></span>
+      </nav>
+
+      <div class="nav-controls">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn-resume" id="btn-resume" aria-label="Download Resume - opens in new tab">Resume</a>
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1"  x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22"  x2="5.64"  y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1"  y1="12" x2="3"  y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64"  y2="18.36"/>
+            <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section class="hero-section" id="hero" aria-label="Introduction">
+      <!-- React Bits Particles Background Container -->
+      <div class="hero-particles-bg" style="width: 100%; height: 100%; position: absolute; inset: 0; z-index: 1; pointer-events: none;"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="hero-hello reveal-hero-item" style="--d:0.05s">Hello, I'm</p>
+          <h1 class="hero-name reveal-hero-item" style="--d:0.12s">Samruddhi<br>Harel</h1>
+          <p class="hero-role reveal-hero-item" style="--d:0.2s">Backend &amp; AI Developer</p>
+          <p class="hero-sub reveal-hero-item" style="--d:0.27s">
+            I build backend and AI projects that work end to end. Python, FastAPI, Node.js and Supabase, with computer vision and a taste for where electronics meets software.
+          </p>
+          <div class="hero-actions reveal-hero-item" style="--d:0.39s">
+            <a href="#projects" class="btn btn-primary magnetic-btn" id="btn-view-projects">View projects</a>
+            <a href="#contact"  class="btn btn-outline magnetic-btn" id="btn-get-in-touch">Get in touch</a>
+          </div>
+          <div class="hero-location reveal-hero-item" style="--d:0.5s">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="hero-pin-icon">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Navi Mumbai, Maharashtra</span>
+          </div>
+        </div>
+
+        <div class="hero-photo-col reveal-hero-photo" style="--d:0.2s">
+          <img src="assets/photo.png" alt="Portrait of Samruddhi Harel" class="hero-photo" id="hero-photo" width="833" height="1100" fetchpriority="high" />
+        </div>
+      </div>
+
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to about section">Scroll to explore</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-label reveal-up">01 / PROFILE</p>
+        <h2 class="section-heading reveal-up" id="about-heading">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="about-bio reveal-up">
+              <p>I'm an Electronics &amp; Telecommunication Engineering student at Datta Meghe College of Engineering in Navi Mumbai. My work is mostly backend and AI: APIs, databases, semantic search and computer vision. I also do the research, shape project ideas and design presentations for my teams, and I'm interested in electronics, IoT and cloud computing.</p>
+            </div>
+
+            <div class="what-i-build reveal-up">
+              <h3 class="wib-heading">What I build</h3>
+              <div class="wib-cards">
+                <div class="wib-card reveal-up">
+                  <span class="wib-label">Backend</span>
+                  <p class="wib-text">APIs, authentication and databases with FastAPI, Node.js, PostgreSQL and Supabase.</p>
+                </div>
+                <div class="wib-card reveal-up">
+                  <span class="wib-label">AI &amp; Vision</span>
+                  <p class="wib-text">Semantic search with the Gemini API and computer vision with YOLO and OpenCV.</p>
+                </div>
+                <div class="wib-card reveal-up">
+                  <span class="wib-label">Electronics &amp; IoT</span>
+                  <p class="wib-text">An E&amp;TC background with interest in Arduino, IoT, MQTT and cloud computing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="education-timeline">
+              <div class="timeline-line-wrap" aria-hidden="true">
+                <div class="timeline-line" id="timeline-line"></div>
+              </div>
+
+              <div class="timeline-item reveal-up">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <h3 class="timeline-degree">B.E. Electronics &amp; Telecommunication Engineering</h3>
+                  <p class="timeline-school">Datta Meghe College of Engineering</p>
+                  <span class="timeline-year">2024 &ndash; Present</span>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal-up">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <h3 class="timeline-degree">Higher Secondary (HSC)</h3>
+                  <p class="timeline-school">K.P.C. English High School &amp; Jr. College</p>
+                  <span class="timeline-year">2024</span>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal-up">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <div class="timeline-content">
+                  <h3 class="timeline-degree">Secondary (SSC)</h3>
+                  <p class="timeline-school">Bharati Vidyapeeth Prashala &amp; Jr. College</p>
+                  <span class="timeline-year">2022</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="quick-facts reveal-up">
+              <h3 class="qf-heading">Quick facts</h3>
+              <ul class="qf-list">
+                <li class="qf-row"><span class="qf-key">Location</span><span class="qf-val">Navi Mumbai</span></li>
+                <li class="qf-row"><span class="qf-key">Degree</span><span class="qf-val">B.E. Electronics &amp; Telecommunication</span></li>
+                <li class="qf-row"><span class="qf-key">Graduating</span><span class="qf-val">2028</span></li>
+                <li class="qf-row"><span class="qf-key">Past role</span><span class="qf-val">Google Gemini Student Ambassador 2026</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <p class="section-label reveal-up">02 / SKILLS</p>
+        <h2 class="section-heading reveal-up" id="skills-heading">Skills</h2>
+
+        <div class="skills-grid">
+          <!-- Backend Card -->
+          <div class="skill-card card-hover reveal-up" data-tilt>
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/>
+                <line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Backend</h3>
+            <div class="chip-group">
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Python</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> C / C++</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> FastAPI</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Node.js</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px; filter:invert(1);" /> Express.js</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">JWT auth</span>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </div>
+
+          <!-- Databases Card -->
+          <div class="skill-card card-hover reveal-up" data-tilt>
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Databases</h3>
+            <div class="chip-group">
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> PostgreSQL</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Supabase</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px; filter:invert(1);" /> Prisma ORM</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> SQLite</span>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </div>
+
+          <!-- AI & Vision Card -->
+          <div class="skill-card card-hover reveal-up" data-tilt>
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a9 9 0 1 0 0 18A9 9 0 0 0 12 2z"/><path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">AI &amp; Vision</h3>
+            <div class="chip-group">
+              <span class="chip"><img src="https://www.vectorlogo.zone/logos/google_gemini/google_gemini-icon.svg" alt="Gemini" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Google Gemini API</span>
+              <span class="chip">AI prompting</span>
+              <span class="chip">YOLO</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> OpenCV</span>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </div>
+
+          <!-- Frontend Card -->
+          <div class="skill-card card-hover reveal-up" data-tilt>
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Frontend</h3>
+            <div class="chip-group">
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> HTML</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> CSS</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> JavaScript</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> React</span>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </div>
+
+          <!-- Electronics & IoT Card -->
+          <div class="skill-card card-hover reveal-up" data-tilt>
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="6" height="6" rx="1"/><path d="M3 12h6M15 12h6M12 3v6M12 15v6"/>
+                <circle cx="3" cy="12" r="1.5"/><circle cx="21" cy="12" r="1.5"/><circle cx="12" cy="3" r="1.5"/><circle cx="12" cy="21" r="1.5"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Electronics &amp; IoT</h3>
+            <div class="chip-group">
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Arduino</span>
+              <span class="chip">IoT &amp; MQTT</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="18" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> AWS</span>
+              <span class="chip">Cloud computing</span>
+              <span class="chip">PCB basics</span>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </div>
+
+          <!-- Tools & Working Skills Card -->
+          <div class="skill-card card-hover reveal-up" data-tilt>
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Tools &amp; Working skills</h3>
+            <div class="chip-group">
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Git &amp; GitHub</span>
+              <span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> VS Code</span>
+              <span class="chip"><img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="Streamlit" width="14" height="14" style="display:inline; vertical-align:middle; margin-right:4px;" /> Streamlit</span>
+              <span class="chip">Excel</span>
+              <span class="chip">Graphic design</span>
+              <span class="chip">Presentation design</span>
+              <span class="chip">Research</span>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <p class="section-label reveal-up">03 / EXPERIENCE</p>
+        <h2 class="section-heading reveal-up" id="experience-heading">Experience</h2>
+        <div class="experience-list">
+          <article class="experience-card card-hover reveal-slide" data-tilt>
+            <div class="exp-header">
+              <div class="exp-title-wrap">
+                <h3 class="exp-title">Google Gemini Student Ambassador 2026</h3>
+                <span class="exp-tag">May 2026 to October 2026</span>
+              </div>
+              <div class="exp-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+            </div>
+            <p class="exp-desc">Represented Gemini and AI initiatives on campus, engaged with student communities and took part in AI awareness and innovation programs.</p>
+            <div class="card-glow" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <p class="section-label reveal-up">04 / PROJECTS</p>
+        <h2 class="section-heading reveal-up" id="projects-heading">Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project-card card-hover reveal-up" data-tilt>
+            <div class="project-number" aria-hidden="true">01</div>
+            <h3 class="project-title">TrafficIQ</h3>
+            <p class="project-desc">AI traffic monitoring and community reporting platform. It uses computer vision to detect vehicles and measure traffic density, with community issue reporting and secure login.</p>
+            <div class="chip-group project-chips">
+              <span class="chip">React</span><span class="chip">Vite</span><span class="chip">FastAPI</span><span class="chip">SQLite</span><span class="chip">YOLO</span><span class="chip">OpenCV</span><span class="chip">JWT</span>
+            </div>
+            <div class="project-links">
+              <a href="https://traffic-iq-sigma.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary magnetic-btn" aria-label="TrafficIQ - live demo">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3"/><path d="M10 2h4v4"/><line x1="14" y1="2" x2="8" y2="8"/></svg>
+                Live demo
+              </a>
+              <a href="https://github.com/samruddhiii012/traffic-iq" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline magnetic-btn" aria-label="TrafficIQ - GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </article>
+
+          <article class="project-card card-hover reveal-up" data-tilt>
+            <div class="project-number" aria-hidden="true">02</div>
+            <h3 class="project-title">Smart Library Intelligence System</h3>
+            <p class="project-desc">An autonomous library inventory and semantic retrieval system. Search books by meaning in plain language, get 3-point technical summaries generated with Gemini, and borrow or return books with safe real-time inventory tracking.</p>
+            <div class="chip-group project-chips">
+              <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">PostgreSQL</span><span class="chip">Supabase</span><span class="chip">Gemini API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://smart-library-intelligence-system.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary magnetic-btn" aria-label="Smart Library Intelligence System - live demo">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3"/><path d="M10 2h4v4"/><line x1="14" y1="2" x2="8" y2="8"/></svg>
+                Live demo
+              </a>
+              <a href="https://github.com/samruddhiii012/smart-library-intelligence-system" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline magnetic-btn" aria-label="Smart Library Intelligence System - GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </article>
+
+          <article class="project-card card-hover reveal-up" data-tilt>
+            <div class="project-number" aria-hidden="true">03</div>
+            <h3 class="project-title">EventFlow AI</h3>
+            <p class="project-desc">A real-time AI venue orchestration and crowd control platform integrating computer vision density tracking, dynamic gate management and NLP voice commands.</p>
+            <div class="chip-group project-chips">
+              <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Supabase</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jagtapmansis006-glitch/EventflowAI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline magnetic-btn" aria-label="EventFlow AI - GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </article>
+
+          <article class="project-card card-hover reveal-up" data-tilt>
+            <div class="project-number" aria-hidden="true">04</div>
+            <h3 class="project-title">CivicEye</h3>
+            <p class="project-desc">A civic issue management platform that helps citizens and municipal authorities report, triage and resolve infrastructure defects through geolocated reports, role-based workflows and automated status tracking.</p>
+            <div class="chip-group project-chips">
+              <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Tailwind</span><span class="chip">Supabase</span><span class="chip">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jagtapmansis006-glitch/Civiceye" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline magnetic-btn" aria-label="CivicEye - GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- Project 05: Cloud BME280 -->
+          <article class="project-card card-hover reveal-up" data-tilt>
+            <div class="project-number" aria-hidden="true">05</div>
+            <h3 class="project-title">Real-Time Environmental Monitoring (BME280)</h3>
+            <p class="project-desc">An IoT system for real-time monitoring of temperature, humidity and pressure, with cloud-based data management. Built as a team project and presented as the paper &ldquo;CLOUD BME&rdquo; at NCATEX 2026.</p>
+            <div class="chip-group project-chips">
+              <span class="chip">Arduino</span><span class="chip">BME280</span><span class="chip">MQTT</span><span class="chip">AWS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://lnkd.in/p/d9YY72Me" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary magnetic-btn" aria-label="Cloud BME Project - LinkedIn Post">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                View Post
+              </a>
+            </div>
+            <div class="card-glow" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section" id="credentials" aria-labelledby="credentials-heading">
+      <div class="container">
+        <p class="section-label reveal-up">05 / CREDENTIALS</p>
+        <h2 class="section-heading reveal-up" id="credentials-heading">Credentials &amp; Achievements</h2>
+        <p class="section-subtitle reveal-up">Hackathons, published research, and professional certifications.</p>
+
+        <div class="cred-showcase-wrap reveal-up">
+          <div class="cred-showcase-content">
+            <div class="cred-tags">
+              <span class="cred-tag">Competition</span>
+              <span class="cred-tag cred-tag-gold">Runner-up</span>
+            </div>
+            <h3 class="cred-title" style="font-size: 1.5rem;">IETE Website Development</h3>
+            <p class="cred-meta">IETE Committee, DMCE &middot; Oct 2026</p>
+            <p class="cred-summary">
+              Runner-up in the Website Development Competition organised by the IETE Committee, Department of Electronics &amp; Telecommunication, Datta Meghe College of Engineering. Click below to explore all my research papers, hackathon participation badges, and job simulation certificates!
+            </p>
+            <div style="margin-top: var(--space-sm);">
+              <button type="button" class="btn btn-primary magnetic-btn" id="btn-view-all-certs">
+                View all certificates (6) &#8599;
+              </button>
+            </div>
+          </div>
+
+          <div class="cred-showcase-preview" onclick="openModal(0)" role="button" tabindex="0" aria-label="Preview featured certificate">
+            <img src="assets/certificates/iete-web-development.jpeg" alt="IETE Website Development Certificate" loading="lazy" />
+            <span class="cred-view">Click to preview &#8599;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <p class="section-label reveal-up">06 / CONTACT</p>
+        <h2 class="section-heading reveal-up" id="contact-heading">Get in touch</h2>
+        <p class="contact-intro reveal-up">I'm looking for internship opportunities in backend and AI, and I'm also interested in electronics-based roles such as IoT and embedded systems. If you have a role, a project idea or just a question, send me a message.</p>
+
+        <div class="contact-layout">
+          <div class="contact-side reveal-up">
+            <div class="contact-availability">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Open to internships</span>
+              <span class="contact-availability-sep" aria-hidden="true">&middot;</span>
+              <span>Navi Mumbai, India</span>
+            </div>
+
+            <div class="contact-email-card">
+              <span class="contact-link-label">Email</span>
+              <a class="contact-email-value" href="mailto:samruddhiharel@gmail.com">samruddhiharel@gmail.com</a>
+              <div class="contact-email-actions">
+                <a href="mailto:samruddhiharel@gmail.com" class="btn btn-sm btn-primary magnetic-btn">Write an email</a>
+                <button type="button" class="btn btn-sm btn-outline magnetic-btn" data-copy-email>Copy email</button>
+              </div>
+              <span class="sr-only" id="copy-status" role="status" aria-live="polite"></span>
+            </div>
+
+            <div class="contact-links">
+              <a href="https://www.linkedin.com/in/samruddhiiharel0022" target="_blank" rel="noopener noreferrer" class="contact-link-card card-hover" aria-label="LinkedIn profile - opens in new tab">
+                <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">samruddhiiharel0022</span>
+                </div>
+                <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg>
+                <div class="card-glow" aria-hidden="true"></div>
+              </a>
+              <a href="https://github.com/samruddhiii012" target="_blank" rel="noopener noreferrer" class="contact-link-card card-hover" aria-label="GitHub profile - opens in new tab">
+                <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">samruddhiii012</span>
+                </div>
+                <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg>
+                <div class="card-glow" aria-hidden="true"></div>
+              </a>
+              <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="contact-link-card card-hover" aria-label="Resume - opens in new tab">
+                <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">Resume</span>
+                  <span class="contact-link-value">View / Download</span>
+                </div>
+                <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg>
+                <div class="card-glow" aria-hidden="true"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-cta reveal-up">
+            <h3 class="contact-cta-title">Start a conversation</h3>
+            <p class="contact-cta-sub">Pick a topic and your email app opens with the message ready to send.</p>
+
+            <div class="cta-options">
+              <a href="mailto:samruddhiharel@gmail.com?subject=Internship%20opportunity&body=Hi%20Samruddhi%2C%0A%0AI%27d%20like%20to%20talk%20to%20you%20about%20an%20internship%20opportunity.%0A%0A" class="cta-option">
+                <span class="cta-option-text">
+                  <span class="cta-option-title">Internship opportunity</span>
+                  <span class="cta-option-desc">Have a role or an opening? Let's talk.</span>
+                </span>
+                <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg>
+              </a>
+              <a href="mailto:samruddhiharel@gmail.com?subject=Project%20collaboration&body=Hi%20Samruddhi%2C%0A%0AI%20have%20a%20project%20idea%20I%27d%20like%20to%20discuss%20with%20you.%0A%0A" class="cta-option">
+                <span class="cta-option-text">
+                  <span class="cta-option-title">Project collaboration</span>
+                  <span class="cta-option-desc">Got an idea you want to build together?</span>
+                </span>
+                <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg>
+              </a>
+              <a href="mailto:samruddhiharel@gmail.com?subject=Hello%20from%20your%20portfolio&body=Hi%20Samruddhi%2C%0A%0A" class="cta-option">
+                <span class="cta-option-text">
+                  <span class="cta-option-title">Just saying hi</span>
+                  <span class="cta-option-desc">A question, feedback, or a friendly hello.</span>
+                </span>
+                <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg>
+              </a>
+            </div>
+
+            <a href="mailto:samruddhiharel@gmail.com?subject=Message%20from%20your%20portfolio&body=Hi%20Samruddhi%2C%0A%0A" class="btn btn-primary btn-full magnetic-btn" id="btn-send">Send me an email</a>
+            <p class="form-note">No email app set up? <a class="inline-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=samruddhiharel@gmail.com&su=Message%20from%20your%20portfolio&body=Hi%20Samruddhi%2C%0A%0A" target="_blank" rel="noopener noreferrer">Open in Gmail</a> or use the copy button on the left.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-name">Samruddhi Harel</span>
+          <span class="footer-role">Backend &amp; AI developer &middot; E&amp;TC engineering student</span>
+          <p class="footer-blurb">Open to internships in backend, AI and electronics-based roles.</p>
+          <div class="footer-social">
+            <a href="mailto:samruddhiharel@gmail.com" class="footer-social-link" aria-label="Email Samruddhi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+            <a href="https://www.linkedin.com/in/samruddhiiharel0022" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn profile - opens in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="https://github.com/samruddhiii012" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub profile - opens in new tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h2 class="footer-heading">Explore</h2>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">Connect</h2>
+          <a href="mailto:samruddhiharel@gmail.com">samruddhiharel@gmail.com</a>
+          <a href="https://www.linkedin.com/in/samruddhiiharel0022" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/samruddhiii012" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <span class="footer-loc">Navi Mumbai, Maharashtra</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; <span id="footer-year"></span> Samruddhi Harel. All rights reserved.</span>
+        <span class="footer-built">Built with HTML, CSS &amp; JavaScript</span>
+        <a href="#hero" class="footer-top-link" aria-label="Back to top of page">Back to top &#8593;</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="fab-top" id="fab-top" aria-label="Scroll back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-label="Certificate viewer" hidden>
+    <div class="modal-box" id="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close certificate viewer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <button class="modal-arrow modal-prev" id="modal-prev" aria-label="Previous certificate">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="modal-arrow modal-next" id="modal-next" aria-label="Next certificate">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="modal-content">
+        <img class="modal-img" id="modal-img" src="" alt="" />
+        <h3 class="modal-title" id="modal-title"></h3>
+        <span class="modal-label" id="modal-label"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
